@@ -1,22 +1,31 @@
 /** Write your CSS in here **/
 body {
-  background-color: palegoldenrod;
+  background-color: olivedrab;
 }
 
-.container {
+.outerContainer {
   background-color: white;
-  align-content: center;
   margin: 100px;
-  padding: 200px;
+  padding: 100px;
 }
 
-p {
-  color: palegoldenrod;
-  text-align: center;
+.quoteContainer {
+  align-self: right;
+  position: absolute;
 }
 
-button {
-  background-color: palegoldenrod;
+.outerContainer p {
+  color: olivedrab;
+  text-align: right;
+  font-size: 16px;
+  font-weight: bolder;
+  display: inline-block;
+  width: 500px;
+  align-content: right;
+}
+
+.btn {
+  background-color: olivedrab;
   color: white;
   align-self: left;
   padding: 20px 30px;
@@ -27,4 +36,6 @@ button {
   display: inline-block;
   font-size: 16px;
   font-weight: bolder;
+  margin: 20px;
+  display: inline-block;
 }

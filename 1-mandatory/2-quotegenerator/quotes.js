@@ -1,13 +1,26 @@
 function quoteGenerator(quotes) {
-  const quoteContainer = document.querySelector(".container");
+  //clearScreen(clear);
+  //quoteElement.innerText = " ";
+  const quoteContainer = document.querySelector(".quoteContainer");
   const quoteElement = document.createElement("p");
 
-  let quoteQuote = pickFromArray(quotes.quote); //// HELP! //// How can I access the object from the array?
-  quoteElement.innerText = quoteQuote;
-  quoteContainer.appendChild(quoteElement);
+  let quoteQuote = pickFromArray(quotes); // this gets me the object element (quote & author element)
+  // should be called once in order to have matching quote and author
+  let quote = quoteQuote.quote; // then get the quote and
+  let author = quoteQuote.author; // then get corresponding author
+
+  quoteElement.innerText = `${quote} ${author}`;
+  quoteContainer.replaceChildren(quoteElement);
 }
-quoteGenerator(quotes);
-//pickFromArray();
+
+////// HELP! I do not understand what is happening below here! //////
+const generateQuote = () => quoteGenerator(quotes);
+const quoteButton = document.querySelector(".btn");
+quoteButton.addEventListener("click", generateQuote);
+
+/////////////////////////////////
+// HELP! How to clear the screen!!
+////////////////////////////////
 
 // DO NOT EDIT BELOW HERE
 
@@ -501,3 +514,5 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+//quoteGenerator(quotes);
